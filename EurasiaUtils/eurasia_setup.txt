@@ -1,0 +1,12 @@
+{
+  "minGUI": {
+    "run_csv_fname": "E:/Dagmar/DayCent/run_files/daycent_run_file.csv"
+  },
+  "setup": {
+    "fname_png": "C:\\AbUniv\\EurasiaUtils\\Images\\World.PNG",
+    "new_shp_dir": "E:\\CountryFilesNew",
+    "results_dir": "E:\\Dagmar\\DayCent\\Results",
+    "root_dir": "E:\\Dagmar",
+    "shp_dir": "C:\\AbUniv\\Astley\\CountryShapefiles"
+  }
+}

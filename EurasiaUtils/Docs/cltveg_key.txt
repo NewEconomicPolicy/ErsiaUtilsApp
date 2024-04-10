@@ -1,0 +1,24 @@
+cltveg (POTSDAM) vegetation classification
+ 2  Alpine_Tundra
+ 3  Moist_Tundra
+ 4  Boreal_Forest
+ 6  Boreal_Woodland
+ 8  Temperate_Mixed_Forest
+ 9  Temperate_Coniferous_Forest
+10  Temperate_Deciduous_Forest
+12  Tall/Medium_Grassland
+13  Short_Grassland
+14  Tropical_Savanna
+15  Arid_Shrubland
+16  Tropical_Evergreen_Forest
+18  Tropical_Deciduous_Forest
+19  Xeromorphic_Forest
+20  Tropical_Forested_Floodplain
+21  Desert
+23  Tropical_Non-Forested_Floodplain
+25  Temperate_Forested_Floodplain
+26  Temperate_Non-Forested_Floodplain
+27  Wet_Savanna
+31  Temperate_Savanna
+33  Temperate_Broadleaved_Evergreen
+35  Mediterranean_Shrubland
