@@ -290,7 +290,7 @@ class Form(QWidget):
         """
         fname = self.w_lbl05.text()
         if fname == "":
-            fname = self.root_dir
+            fname = self.settings['root_dir']
 
         fname = QFileDialog.getOpenFileName(self, 'Open run file', fname, 'Excel files (*.xlsx)')
 
@@ -304,11 +304,11 @@ class Form(QWidget):
         """
         fname = self.w_lbl07.text()
         if fname == "":
-            fname = self.root_dir
+            fname = self.settings['root_dir']
 
         fname = QFileDialog.getOpenFileName(self, 'Open run file', fname, 'csv files (*.csv)')
 
-        self.lbl07.setText(fname)
+        self.w_lbl07.setText(fname)
 
     def codesClicked(self):
         """

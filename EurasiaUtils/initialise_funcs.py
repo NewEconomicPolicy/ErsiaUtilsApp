@@ -47,7 +47,7 @@ def _read_setup_file(form, gui_flag=False):
     read settings used for programme from the setup file, if it exists,
     or create setup file using default values if file does not exist
     """
-    setup_file = join(getcwd(), 'eurasia_setup.txt')
+    setup_file = join(getcwd(), 'eurasia_setup.json')
     if exists(setup_file):
         try:
             with open(setup_file, 'r') as fsetup:
@@ -87,7 +87,6 @@ def _read_setup_file(form, gui_flag=False):
 
     return settings
 
-
 def _write_default_setup_file(setup_file):
     """
     #  stanza if setup_file needs to be created
@@ -111,12 +110,13 @@ def _write_default_setup_file(setup_file):
 
 def write_config_file(form):
     """
-    # write current selections to config file
+    write current selections to config file
     """
-    #
     config_json = {
         'run_csv_fname': form.w_lbl07.text(),
         'excel_csv_fname': form.w_lbl05.text()
     }
     with open(form.settings['config_file'], 'w') as fsetup:
         json_dump(config_json, fsetup, indent=2, sort_keys=True)
+
+    return
