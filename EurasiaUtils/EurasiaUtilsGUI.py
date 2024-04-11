@@ -263,10 +263,13 @@ class Form(QWidget):
             print(table_info.table_name)
 
         # retcode = cursor.execute('select * from D_ROOTS')
-        retcode = cursor.execute('select * from HWSD2_LAYERS where HWSD2_SMU_ID = 9612')
 
-        for row in cursor.fetchall():
-            print(row)
+        for row in cursor.columns(table='HWSD2_LAYERS'):
+            print(row.column_name)
+
+        retcode = cursor.execute('select * from HWSD2_LAYERS where HWSD2_SMU_ID = 9612')
+        for rec in cursor.fetchall():
+            print(rec)
 
         cursor.close()
 
