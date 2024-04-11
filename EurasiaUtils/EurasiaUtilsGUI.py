@@ -267,7 +267,7 @@ class Form(QWidget):
         for row in cursor.columns(table='HWSD2_LAYERS'):
             print(row.column_name)
 
-        retcode = cursor.execute('select * from HWSD2_LAYERS where HWSD2_SMU_ID = 9612')
+        retcode = cursor.execute('select SAND, SILT, CLAY from HWSD2_LAYERS where HWSD2_SMU_ID = 9612')
         for rec in cursor.fetchall():
             print(rec)
 
