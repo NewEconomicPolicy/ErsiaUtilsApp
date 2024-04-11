@@ -28,7 +28,6 @@ from initialise_funcs import initiation, write_config_file
 
 ERROR_STR = '*** Error *** '
 
-
 class Form(QWidget):
     """
     X
@@ -263,7 +262,8 @@ class Form(QWidget):
         for table_info in cursor.tables(tableType='TABLE'):
             print(table_info.table_name)
 
-        retcode = cursor.execute('select * from D_ROOTS')
+        # retcode = cursor.execute('select * from D_ROOTS')
+        retcode = cursor.execute('select * from HWSD2_LAYERS where HWSD2_SMU_ID = 9612')
 
         for row in cursor.fetchall():
             print(row)
