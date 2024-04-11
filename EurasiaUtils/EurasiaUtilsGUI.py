@@ -245,6 +245,7 @@ class Form(QWidget):
         """
 
         """
+        ms_drvr = 'Microsoft Access Driver(*.mdb, *.accdb)'
         access_db_fn = 'E:\\Apps\\test_db\\Database1.accdb'
         access_db_fn = 'E:\\HWSD_V2\\mdb\\HWSD2.mdb'
         lat, lon = (28.1, 74.23)
@@ -267,7 +268,10 @@ class Form(QWidget):
         for row in cursor.columns(table='HWSD2_LAYERS'):
             print(row.column_name)
 
-        retcode = cursor.execute('select SAND, SILT, CLAY from HWSD2_LAYERS where HWSD2_SMU_ID = 9612')
+        VARS = ' SEQUENCE, SHARE, LAYER, SAND, SILT, CLAY, BULK, REF_BULK, ORG_CARBON, PH_WATER '
+        cmd = 'select ' + VARS + ' from HWSD2_LAYERS where HWSD2_SMU_ID = 9612'
+        retcode = cursor.execute(cmd)
+
         for rec in cursor.fetchall():
             print(rec)
 
