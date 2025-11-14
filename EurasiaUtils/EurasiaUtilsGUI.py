@@ -272,9 +272,11 @@ class Form(QWidget):
         cmd = 'select ' + VARS + ' from HWSD2_LAYERS where HWSD2_SMU_ID = 9612'
         retcode = cursor.execute(cmd)
 
-        for rec in cursor.fetchall():
+        recs = [rec for rec in cursor.fetchall()]
+        '''
+        for rec in recs:
             print(rec)
-
+        '''
         cursor.close()
 
         return
